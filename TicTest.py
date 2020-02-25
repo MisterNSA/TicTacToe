@@ -1,7 +1,7 @@
 #TicTacToe
 #Geplante Features: Singleplayer vs Bot. / Online Multiplayer? / GUI?
 #Ersteller: Tobias Dominik Weber aka. MisterNSA 
-#Version: 0.7 Datum: 23.02.2020
+#Version: 0.8 Datum: 25.02.2020
 
 import TicTacToe
 
@@ -13,10 +13,9 @@ def Menu():
         TicTacToe.Multiplayer_Game()
     elif Menu_item == 2:
         TicTacToe.Rules()
-        TicTacToe.Menu()
+        Menu()
     else:
-        Print("Please enter a valid Number and confirm with the Enter-Key")
+        print("Please enter a valid Number and confirm with the Enter-Key")
+        Menu()
 
 Menu()
-
-"""PROBLEM MIT player_move Zeile 19"""
