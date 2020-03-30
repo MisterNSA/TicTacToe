@@ -176,7 +176,9 @@ def Win_detect(board):
         if loose != False: # Wenn Gegenüber gewinnen könnte
             board[loose] = sign #Feld, dass zur Niederlage führt besetzen    
         else:
-            if board[1] == " ":
+            if board[5] == " ": #Nachdem der erste ZUg zufällig war, soll nun optimal gespielt werden. Für die Optimalen Chancen muss zuerst die Mitte und danach die Ecken belegt werden.
+                board[5] = sign
+            elif board[1] == " ":
                 board[1] = sign
             elif board[3] == " ":
                 board[3] = sign
